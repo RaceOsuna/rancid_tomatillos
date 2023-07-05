@@ -1,0 +1,23 @@
+.header {
+  box-shadow: 0px 2.98256px 7.4564px rgba(63, 174, 4, 0.528);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  color: rgb(8, 123, 19);
+  background-color: black;
+  margin-right: auto;
+}
+
+button {
+  font-size: larger;
+  border-style: none;
+  background-color: black;
+  color: rgb(8, 123, 19)
+}
+
+button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
