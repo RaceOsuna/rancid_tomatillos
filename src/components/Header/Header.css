@@ -3,7 +3,21 @@
   height: 70px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 20px;
   color: rgb(8, 123, 19);
   background-color: black;
+  margin-right: auto;
+}
+
+button {
+  font-size: larger;
+  border-style: none;
+  background-color: black;
+  color: rgb(8, 123, 19)
+}
+
+button:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
