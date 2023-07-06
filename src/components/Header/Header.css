@@ -10,14 +10,14 @@
   margin-right: auto;
 }
 
-button {
+.header button {
   font-size: larger;
   border-style: none;
   background-color: black;
   color: rgb(8, 123, 19)
 }
 
-button:hover {
+.header button:hover {
   text-decoration: underline;
   cursor: pointer;
 }

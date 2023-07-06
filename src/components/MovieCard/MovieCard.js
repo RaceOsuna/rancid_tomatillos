@@ -1,8 +1,8 @@
 import './MovieCard.css';
 
-function MovieCard({poster_path, title, average_rating, release_date}) {
+function MovieCard({poster_path, title, average_rating, release_date, id, selectMovie}) {
   return (
-    <div className='card'>
+    <div className='card' onClick={() => selectMovie(id)}>
       <img src={poster_path}/>
       <div className='movie-details'>
         <h4>{title}</h4>

@@ -1,7 +1,7 @@
 import './MovieCardContainer.css';
 import MovieCard from '../MovieCard/MovieCard';
 
-function MovieCardContainer({movieData}) {
+function MovieCardContainer({movieData, selectMovie}) {
   // id, poster_path, title, average_rating, release_date, key
   const movieElements = movieData.map(movie => (
     <MovieCard 
@@ -11,6 +11,7 @@ function MovieCardContainer({movieData}) {
       title={movie.title}
       average_rating={movie.average_rating}
       release_date={movie.release_date}
+      selectMovie={selectMovie}
     />
   ));
 
