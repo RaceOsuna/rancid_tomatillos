@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react';
 function App() {
   const [movieData, setMovieData] = useState([]);
   const [showMovie, setShowMovie] = useState(false);
-  const [clickedMovie, setClickedMovie] = useState([]);
+  const [clickedMovie, setClickedMovie] = useState({});
   const [error, setError] = useState(false);
 
   useEffect(() => {
