@@ -1,8 +1,8 @@
 import './MovieCardContainer.css';
 import MovieCard from '../MovieCard/MovieCard';
+import PropTypes from 'prop-types';
 
 function MovieCardContainer({movieData, selectMovie}) {
-  // id, poster_path, title, average_rating, release_date, key
   const movieElements = movieData.map(movie => (
     <MovieCard 
       key={movie.id}
@@ -23,3 +23,8 @@ function MovieCardContainer({movieData, selectMovie}) {
 }
 
 export default MovieCardContainer;
+
+MovieCardContainer.propTypes = {
+  movieData: PropTypes.arrayOf(PropTypes.object), 
+  selectMovie: PropTypes.func
+}

@@ -1,4 +1,5 @@
 import './Error.css';
+import PropTypes from 'prop-types';
 
 function Error({error}) {
   return (
@@ -9,3 +10,8 @@ function Error({error}) {
 }
 
 export default Error;
+
+Error.propTypes = {
+  error: PropTypes.string
+}
+

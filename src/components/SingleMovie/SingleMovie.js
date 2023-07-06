@@ -1,4 +1,5 @@
-import "./SingleMovie.css"
+import "./SingleMovie.css";
+import PropTypes from 'prop-types';
 
 export default function SingleMovie({clickedMovie, goBack}) {
   return (
@@ -23,4 +24,9 @@ export default function SingleMovie({clickedMovie, goBack}) {
       </div> 
     </div>
   )
+}
+
+SingleMovie.propTypes = {
+  clickedMovie: PropTypes.object, 
+  goBack: PropTypes.func
 }
