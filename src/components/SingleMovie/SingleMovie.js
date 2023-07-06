@@ -13,7 +13,7 @@ export default function SingleMovie({clickedMovie, goBack}) {
           <div className="details">
             {clickedMovie.tagling && <p>"{clickedMovie.tagline}"</p>}<br />
             <p>{clickedMovie.overview}</p><br />
-            <p>{clickedMovie.runtime} minutes</p><br />
+            <p>{clickedMovie.runtime} minutes.</p><br />
             <p>{clickedMovie.average_rating} ⭐️</p>
             <p>{clickedMovie.release_date}</p><br />
             <p>{clickedMovie.budget}</p>
