@@ -1,0 +1,18 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid rgb(8, 125, 19);
+  text-align: center;
+  color: white;
+  height: fit-content;
+  object-fit: cover;
+}
+
+.movie-details {
+  background-color: black;
+}
+
+.movie-details > h4:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
