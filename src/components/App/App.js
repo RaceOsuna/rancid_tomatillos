@@ -14,7 +14,6 @@ function App() {
   const [errorCode, setErrorCode] = useState(false);
   
   useEffect(() => {
-    
     getData('/movi', setErrorCode)
     .then(data => {
       setMovieData(data.movies);
