@@ -1,11 +1,11 @@
 function handleErrors(response) {
   const errType = response.status.toString().charAt(0);
   if (errType === '4') {
-    return `${response.status} Error! This Page does not exist, please try a differnt url.`
+    return `${response.status} Error! This Page does not exist, please try a differnt url.`;
   } else if (errType === '5') {
-    return `${response.status} Error! Ooops, it seems that the server is down...`
+    return `${response.status} Error! Ooops, it seems that the server is down...`;
   } else {
-    return `${response.status} Error!`
+    return `${response.status} Error!`;
   }
 }
 

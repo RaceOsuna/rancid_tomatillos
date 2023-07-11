@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     
-    getData()
+    getData('/movies')
     .then(data => {
       setMovieData(data.movies);
       return data;
@@ -25,8 +25,7 @@ function App() {
   }, []);
 
   function selectMovie(id) {
-    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
-    .then(response => response.json())
+    getData(`/movies/${id}`)
     .then(data => setClickedMovie(data.movie))
 
     setShowMovie(true);
