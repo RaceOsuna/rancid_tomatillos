@@ -38,7 +38,6 @@ function App() {
 
   return (
     <div>
-      {console.log('see', typeof error)}
     {error ? <ErrorDisplay error={error} /> :
     <>
       {!showMovie && <Header />}
