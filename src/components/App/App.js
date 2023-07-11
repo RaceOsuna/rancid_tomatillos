@@ -1,7 +1,7 @@
 import './App.css';
 import Header from '../Header/Header';
 import MovieCardContainer from '../MovieCardContainer/MovieCardContainer';
-import Error from '../Error/Error';
+import ErrorDisplay from '../ErrorDisplay/ErrorDisplay';
 import SingleMovie from '../SingleMovie/SingleMovie';
 import { useState, useEffect } from 'react';
 
@@ -59,7 +59,7 @@ function App() {
 
   return (
     <div>
-    {error ? <Error error={error} /> :
+    {error ? <ErrorDisplay error={error} /> :
     <>
       {!showMovie && <Header />}
       {showMovie ? <SingleMovie clickedMovie={clickedMovie} goBack={goBack}/> : <MovieCardContainer movieData={movieData} selectMovie={selectMovie}/>}

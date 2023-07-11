@@ -1,4 +1,4 @@
-import './Error.css';
+import './ErrorDisplay.css';
 import PropTypes from 'prop-types';
 
 function Error({error}) {
