@@ -12,13 +12,13 @@ export default function SingleMovie({clickedMovie, goBack}) {
             <button onClick={() => goBack()}>⬅</button>
           </div>
           <div className="details">
-            {clickedMovie.tagling && <p>"{clickedMovie.tagline}"</p>}<br />
-            <p>{clickedMovie.overview}</p><br />
-            <p>{clickedMovie.runtime} minutes.</p><br />
-            <p>{clickedMovie.average_rating} ⭐️</p>
-            <p>{clickedMovie.release_date}</p><br />
-            <p>{clickedMovie.budget}</p>
-            <p>{clickedMovie.revenue}</p>
+            {clickedMovie.tagline && <p>"{clickedMovie.tagline}"</p>}<br />
+            <p>Overview: {clickedMovie.overview}</p><br />
+            <p>Length: {clickedMovie.runtime} minutes.</p><br />
+            <p>Average Rating: {clickedMovie.average_rating} ⭐️</p>
+            <p>Release Date: {clickedMovie.release_date}</p><br />
+            <p>Movie Budget: ${clickedMovie.budget}</p>
+            <p>Movie Revenue: ${clickedMovie.revenue}</p>
           </div>  
         </div> 
       </div> 
