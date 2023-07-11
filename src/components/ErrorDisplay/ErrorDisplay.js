@@ -1,7 +1,8 @@
 import './ErrorDisplay.css';
 import PropTypes from 'prop-types';
 
-function Error({error}) {
+function ErrorDisplay({error}) {
+  console.log('err display: ', error)
   return (
     <div>
       <h1>{error}</h1>
@@ -9,7 +10,7 @@ function Error({error}) {
   )
 }
 
-export default Error;
+export default ErrorDisplay;
 
 Error.propTypes = {
   error: PropTypes.string
