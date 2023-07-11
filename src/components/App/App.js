@@ -10,17 +10,18 @@ function App() {
   const [movieData, setMovieData] = useState([]);
   const [showMovie, setShowMovie] = useState(false);
   const [clickedMovie, setClickedMovie] = useState({});
-  const [error, setError] = useState(false);
-
+  const [errorMessage, setErrorMessage] = useState(false);
+  const [errorCode, setErrorCode] = useState(false);
+  
   useEffect(() => {
     
-    getData('/movies')
+    getData('/movi', setErrorCode)
     .then(data => {
       setMovieData(data.movies);
       return data;
     })
     .catch(err => {
-      setError(err.message);
+      setErrorMessage(err.message);
     })
   }, []);
 
@@ -37,7 +38,7 @@ function App() {
 
   return (
     <div>
-    {error ? <ErrorDisplay error={error} /> :
+    {errorMessage ? <ErrorDisplay errorMessage={errorMessage} errorCode={errorCode}/> :
     <>
       {!showMovie && <Header />}
       {showMovie ? <SingleMovie clickedMovie={clickedMovie} goBack={goBack}/> : <MovieCardContainer movieData={movieData} selectMovie={selectMovie}/>}

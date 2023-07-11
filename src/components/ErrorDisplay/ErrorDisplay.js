@@ -1,11 +1,12 @@
 import './ErrorDisplay.css';
 import PropTypes from 'prop-types';
 
-function ErrorDisplay({error}) {
-  console.log('err display: ', error)
+function ErrorDisplay({errorMessage, errorCode}) {
   return (
-    <div>
-      <h1>{error}</h1>
+    <div className='error-container'>
+      <img src='https://em-content.zobj.net/source/skype/289/loudly-crying-face_1f62d.png' alt='crying face'/>
+      <h1>{errorCode}</h1>
+      <p>{errorMessage}</p>
     </div>
   )
 }
