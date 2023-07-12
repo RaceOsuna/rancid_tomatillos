@@ -18,6 +18,6 @@ function ErrorDisplay({fetchError}) {
 export default ErrorDisplay;
 
 Error.propTypes = {
-  error: PropTypes.string
+  fetchError: PropTypes.string
 }
 

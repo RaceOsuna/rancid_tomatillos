@@ -36,5 +36,5 @@ function MovieCardContainer({getFetchError}) {
 export default MovieCardContainer;
 
 MovieCardContainer.propTypes = {
-  movieData: PropTypes.arrayOf(PropTypes.object), 
+  getFetchError: PropTypes.func
 }

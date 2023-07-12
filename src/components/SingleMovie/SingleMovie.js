@@ -42,5 +42,5 @@ export default function SingleMovie({getFetchError}) {
 }
 
 SingleMovie.propTypes = {
-  movie: PropTypes.object, 
+  getFetchError: PropTypes.func
 }
