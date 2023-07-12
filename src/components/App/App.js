@@ -8,27 +8,16 @@ import getData from '../../apiCalls';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
-  const [movieData, setMovieData] = useState([]);
-  // const [showMovie, setShowMovie] = useState(false);
-  const [clickedMovie, setClickedMovie] = useState({});
-  const [errorMessage, setErrorMessage] = useState(false);
-  const [errorCode, setErrorCode] = useState(false);
-  
-  // useEffect(() => {
-  //   getData('/movies', setErrorCode)
-  //   .then(data => {
-  //     setMovieData(data.movies);
-  //     return data;
-  //   })
-  //   .catch(err => {
-  //     setErrorMessage(err.message);
-  //   })
-  // }, []);
+  const [error, setError] = useState(false);
+
+  function getError(response) {
+    setError(response);
+  }
 
   return (
     <Routes>
-      <Route path='/' element={<><Header /><MovieCardContainer /></>}/>
-      <Route path='/:id' element={<SingleMovie />}/>
+      <Route path='/' element={error ? <ErrorDisplay error={error}/> : <><Header /><MovieCardContainer getError={getError}/></>}/>
+      <Route path='/:id' element={error ? <ErrorDisplay error={error}/> : <SingleMovie getError={getError}/>}/>
       <Route path='*' element={<ErrorDisplay />} />
     </Routes>
   );
