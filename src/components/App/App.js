@@ -3,21 +3,20 @@ import Header from '../Header/Header';
 import MovieCardContainer from '../MovieCardContainer/MovieCardContainer';
 import ErrorDisplay from '../ErrorDisplay/ErrorDisplay';
 import SingleMovie from '../SingleMovie/SingleMovie';
-import { useState, useEffect } from 'react';
-import getData from '../../apiCalls';
+import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
-  const [error, setError] = useState(false);
+  const [fetchError, setFetchError] = useState(false);
 
-  function getError(response) {
-    setError(response);
+  function getFetchError(response) {
+    setFetchError(response);
   }
 
   return (
     <Routes>
-      <Route path='/' element={error ? <ErrorDisplay error={error}/> : <><Header /><MovieCardContainer getError={getError}/></>}/>
-      <Route path='/:id' element={error ? <ErrorDisplay error={error}/> : <SingleMovie getError={getError}/>}/>
+      <Route path='/' element={fetchError ? <ErrorDisplay fetchError={fetchError}/> : <><Header /><MovieCardContainer getFetchError={getFetchError}/></>}/>
+      <Route path='/:id' element={fetchError ? <ErrorDisplay fetchError={fetchError}/> : <SingleMovie getFetchError={getFetchError}/>}/>
       <Route path='*' element={<ErrorDisplay />} />
     </Routes>
   );
