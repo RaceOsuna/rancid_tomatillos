@@ -10,7 +10,7 @@ function MovieCardContainer() {
   const [movieData, setMovieData] = useState([]);
 
   useEffect(() => {
-    getData('/mov')
+    getData('/movies')
     .then(data => setMovieData(data.movies))
     .catch()
   },[])
