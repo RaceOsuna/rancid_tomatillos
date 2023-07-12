@@ -1,18 +1,31 @@
 import './MovieCardContainer.css';
 import MovieCard from '../MovieCard/MovieCard';
+import getData from '../../apiCalls';
 import PropTypes from 'prop-types';
+import { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import handleErrors from '../../errorHandling';
 
-function MovieCardContainer({movieData, selectMovie}) {
+function MovieCardContainer() {
+  const [movieData, setMovieData] = useState([]);
+
+  useEffect(() => {
+    getData('/mov')
+    .then(data => setMovieData(data.movies))
+    .catch()
+  },[])
+
+
   const movieElements = movieData.map(movie => (
-    <MovieCard 
-      key={movie.id}
-      id={movie.id}
-      poster_path={movie.poster_path}
-      title={movie.title}
-      average_rating={movie.average_rating}
-      release_date={movie.release_date}
-      selectMovie={selectMovie}
-    />
+    <Link to={`/${movie.id}`} key={movie.id}>
+      <MovieCard 
+        id={movie.id}
+        poster_path={movie.poster_path}
+        title={movie.title}
+        average_rating={movie.average_rating}
+        release_date={movie.release_date}
+      />
+    </Link>
   ));
 
   return (
@@ -26,5 +39,4 @@ export default MovieCardContainer;
 
 MovieCardContainer.propTypes = {
   movieData: PropTypes.arrayOf(PropTypes.object), 
-  selectMovie: PropTypes.func
 }

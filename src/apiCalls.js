@@ -1,12 +1,11 @@
 import {handleErrors} from './errorHandling';
 
-function getData(path, setStatusCode) {
+function getData(path) {
   return fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/${path}`)
   .then(response => {
     if (!response.ok) {
-      let errMessage = handleErrors(response);
-      setStatusCode(response.status);
-      throw new Error(errMessage);
+      let error = handleErrors(response);
+      throw new Error(error);
     }
     return response.json();
   })

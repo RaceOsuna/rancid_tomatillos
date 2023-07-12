@@ -1,24 +1,40 @@
 import "./SingleMovie.css";
 import PropTypes from 'prop-types';
+import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import getData from '../../apiCalls';
+import { Link } from 'react-router-dom';
+import handleErrors from '../../errorHandling';
 
-export default function SingleMovie({clickedMovie, goBack}) {
+export default function SingleMovie() {
+  const {id} = useParams();
+
+  const [movie, setMovie] = useState('');
+
+  useEffect(() => {
+    getData(`/movies/${id}`)
+    .then(data => setMovie(data.movie))
+  }, [])
+
   return (
     <div className="single_movie_view">
-      <img src={clickedMovie.backdrop_path} />
+      <img src={movie.backdrop_path} />
       <div className="overlay"> 
         <div className="movie_details">  
           <div className="movie_header">
-            <h1>{clickedMovie.title}</h1>
-            <button onClick={() => goBack()}>⬅</button>
+            <h1>{movie.title}</h1>
+            <Link to='/'>
+              <button>⬅</button>
+            </Link>
           </div>
           <div className="details">
-            {clickedMovie.tagline && <p>"{clickedMovie.tagline}"</p>}<br />
-            <p>Overview: {clickedMovie.overview}</p><br />
-            <p>Length: {clickedMovie.runtime} minutes.</p><br />
-            <p>Average Rating: {clickedMovie.average_rating} ⭐️</p>
-            <p>Release Date: {clickedMovie.release_date}</p><br />
-            <p>Movie Budget: ${clickedMovie.budget}</p>
-            <p>Movie Revenue: ${clickedMovie.revenue}</p>
+            {movie.tagline && <p>"{movie.tagline}"</p>}<br />
+            <p>Overview: {movie.overview}</p><br />
+            <p>Length: {movie.runtime} minutes.</p><br />
+            <p>Average Rating: {movie.average_rating} ⭐️</p>
+            <p>Release Date: {movie.release_date}</p><br />
+            <p>Movie Budget: ${movie.budget}</p>
+            <p>Movie Revenue: ${movie.revenue}</p>
           </div>  
         </div> 
       </div> 
@@ -27,6 +43,5 @@ export default function SingleMovie({clickedMovie, goBack}) {
 }
 
 SingleMovie.propTypes = {
-  clickedMovie: PropTypes.object, 
-  goBack: PropTypes.func
+  movie: PropTypes.object, 
 }
