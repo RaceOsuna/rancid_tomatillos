@@ -3,18 +3,16 @@ import MovieCard from '../MovieCard/MovieCard';
 import getData from '../../apiCalls';
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import handleErrors from '../../errorHandling';
+import { Link } from 'react-router-dom';
 
-function MovieCardContainer() {
+function MovieCardContainer({getFetchError}) {
   const [movieData, setMovieData] = useState([]);
 
   useEffect(() => {
     getData('/movies')
     .then(data => setMovieData(data.movies))
-    .catch()
+    .catch(err => getFetchError(err))
   },[])
-
 
   const movieElements = movieData.map(movie => (
     <Link to={`/${movie.id}`} key={movie.id}>
@@ -38,5 +36,5 @@ function MovieCardContainer() {
 export default MovieCardContainer;
 
 MovieCardContainer.propTypes = {
-  movieData: PropTypes.arrayOf(PropTypes.object), 
+  getFetchError: PropTypes.func
 }

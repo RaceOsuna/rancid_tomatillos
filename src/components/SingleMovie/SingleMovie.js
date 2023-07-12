@@ -4,16 +4,15 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import getData from '../../apiCalls';
 import { Link } from 'react-router-dom';
-import handleErrors from '../../errorHandling';
 
-export default function SingleMovie() {
+export default function SingleMovie({getFetchError}) {
   const {id} = useParams();
-
   const [movie, setMovie] = useState('');
 
   useEffect(() => {
     getData(`/movies/${id}`)
     .then(data => setMovie(data.movie))
+    .catch(err => getFetchError(err))
   }, [])
 
   return (
@@ -43,5 +42,5 @@ export default function SingleMovie() {
 }
 
 SingleMovie.propTypes = {
-  movie: PropTypes.object, 
+  getFetchError: PropTypes.func
 }

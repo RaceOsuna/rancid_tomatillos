@@ -5,7 +5,8 @@ function getData(path) {
   .then(response => {
     if (!response.ok) {
       let error = handleErrors(response);
-      throw new Error(error);
+      let fetchError= new Error(JSON.stringify(error));
+      throw fetchError;
     }
     return response.json();
   })
