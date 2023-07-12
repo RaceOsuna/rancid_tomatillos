@@ -1,9 +1,9 @@
 import './MovieCard.css';
 import PropTypes from 'prop-types';
 
-function MovieCard({poster_path, title, average_rating, release_date, id, selectMovie}) {
+function MovieCard({poster_path, title, average_rating, release_date}) {
   return (
-    <div className='card' onClick={() => selectMovie(id)}>
+    <div className='card'>
       <img src={poster_path}/>
       <div className='movie-details'>
         <h4>{title}</h4>
@@ -21,6 +21,4 @@ MovieCard.propTypes = {
   title: PropTypes.string, 
   average_rating: PropTypes.oneOfType([PropTypes.number, PropTypes.string]), 
   release_date: PropTypes.string, 
-  id: PropTypes.number, 
-  selectMovie: PropTypes.func
 }
