@@ -12,7 +12,7 @@ function MovieCardContainer() {
   useEffect(() => {
     getData('/mov')
     .then(data => setMovieData(data.movies))
-    .catch()
+    .catch(err => console.log(err.message))
   },[])
 
 
