@@ -5,7 +5,7 @@
   text-align: center;
   color: white;
   height: fit-content;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 .movie-details {
