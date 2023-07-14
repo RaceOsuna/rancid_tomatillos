@@ -48,6 +48,17 @@ function MovieCardContainer({getFetchError}) {
     </Link>
   ));
 
+  const renderNotFound = () => {
+    return (
+      <div className='no-result-container'>
+        <p>Sorry, no matched movie was found. Please try a different keyword.</p>
+      </div>
+    )
+  };
+
+  let searchResult = displayMovies.length ? movieElements : renderNotFound();
+
+
   return (
   <div> 
     <div className='form-container'>
@@ -63,7 +74,7 @@ function MovieCardContainer({getFetchError}) {
       <Link to="." className='clear' onClick={clearResults}>Clear Results</Link>
     </div>
     <section className='movie_card_section'>
-      {movieElements}
+      {searchResult}
     </section>
   </div>  
   );
