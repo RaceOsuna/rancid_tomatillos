@@ -27,6 +27,11 @@ function MovieCardContainer({getFetchError}) {
     setSearchParms({[event.target.name]: event.target.value})
   }
 
+  function clearResults() {
+    setFormData({search: ''})
+    setSearchParms({})
+  }
+
   const movieFilter = searchParams.get('search')
 
   const displayMovies = movieFilter ? movieData.filter(movie => movie.title.toLowerCase().includes(movieFilter)) : movieData
@@ -55,6 +60,7 @@ function MovieCardContainer({getFetchError}) {
         onChange={handleChange}>
         </input>
       </form>
+      <Link to="." className='clear' onClick={clearResults}>Clear Results</Link>
     </div>
     <section className='movie_card_section'>
       {movieElements}

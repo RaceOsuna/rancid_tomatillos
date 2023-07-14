@@ -16,14 +16,20 @@
 
 .form-container form {
   width: 30%;
+  display: flex;
+  justify-content: space-between;
 } 
 
 .form-container input {
   border: 3px solid rgb(8, 123, 19);
   border-radius: 20px;
   height:30px;
-  width: 99%;
+  width: 95%;
   font-size: 20px;
+}
+
+.clear {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 420px) {
