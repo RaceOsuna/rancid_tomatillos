@@ -6,13 +6,11 @@
   color: white;
   font-size: 14px;
   height: fit-content;
-  max-width: 400px;
-  /* object-fit: cover; */
+  max-width: 350px;
 }
 
 .card-img {
   display: flex;
-  height:350px;
 }
 
 .card-img img {
