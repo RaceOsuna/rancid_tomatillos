@@ -3,10 +3,14 @@ import MovieCard from '../MovieCard/MovieCard';
 import getData from '../../apiCalls';
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 
 function MovieCardContainer({getFetchError}) {
   const [movieData, setMovieData] = useState([]);
+  const [formData, setFormData] = useState({
+    search: ''
+  });
+  const [searchParams, setSearchParms] = useSearchParams();
 
   useEffect(() => {
     getData('/movies')
@@ -14,7 +18,20 @@ function MovieCardContainer({getFetchError}) {
     .catch(err => getFetchError(err))
   },[])
 
-  const movieElements = movieData.map(movie => (
+  function handleChange(event) {
+    setFormData(() => {
+      return {
+        [event.target.name]: event.target.value
+      }
+    })
+    setSearchParms({[event.target.name]: event.target.value})
+  }
+
+  const movieFilter = searchParams.get('search')
+
+  const displayMovies = movieFilter ? movieData.filter(movie => movie.title.toLowerCase().includes(movieFilter)) : movieData
+
+  const movieElements = displayMovies.map(movie => (
     <Link to={`/${movie.id}`} key={movie.id}>
       <MovieCard 
         id={movie.id}
@@ -27,9 +44,22 @@ function MovieCardContainer({getFetchError}) {
   ));
 
   return (
+  <div> 
+    <div className='form-container'>
+      <form>
+        <input 
+        name='search' 
+        type="text" 
+        placeholder='Search' 
+        value={formData.search} 
+        onChange={handleChange}>
+        </input>
+      </form>
+    </div>
     <section className='movie_card_section'>
       {movieElements}
     </section>
+  </div>  
   );
 }
 
