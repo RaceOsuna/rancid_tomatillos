@@ -36,7 +36,10 @@ describe('Search Ba r', () => {
 
   it('user should see a failure message, if the keyword does not match any movie title', () => {
     cy.get('input[placeholder="Search Titles"]')
-    // to be implemented
+    .type('jj', {force: true})
+
+    cy.url().should('includes', '/?search=jj')
+    cy.contains('Sorry, no matched movie was found. Please try a different keyword.')
   })
 
   it('user should be able to click the clear result button', () => {
