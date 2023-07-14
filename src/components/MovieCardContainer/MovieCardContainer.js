@@ -50,7 +50,7 @@ function MovieCardContainer({getFetchError}) {
         <input 
         name='search' 
         type="text" 
-        placeholder='Search' 
+        placeholder='Search Titles' 
         value={formData.search} 
         onChange={handleChange}>
         </input>

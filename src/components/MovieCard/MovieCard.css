@@ -38,3 +38,13 @@
   cursor: pointer;
   text-decoration: underline;
 }
+
+@media screen and (max-width: 420px) {
+  .card-img {
+    height:250px
+  }
+
+  .card {
+    font-size: 12px;
+  }
+}
