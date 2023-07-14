@@ -4,3 +4,22 @@
   grid-gap: 30px;
   grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
 }
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 30px 0;
+}
+
+.form-container form {
+  width: 30%;
+} 
+
+.form-container input {
+  border: 3px solid rgb(8, 123, 19);;
+  height:30px;
+  width: 99%;
+  font-size: 20px;
+}

@@ -57,21 +57,3 @@
   font-size: 200%;
   color: white;
 }
-
-.form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 30px 0;
-}
-
-.form-container form {
-  width: 30%;
-} 
-
-.form-container input {
-  height:30px;
-  width: 100%;
-  font-size: 20px;
-}
