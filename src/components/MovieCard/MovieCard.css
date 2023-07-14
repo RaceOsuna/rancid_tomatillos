@@ -25,8 +25,13 @@
   align-items: center;
   justify-content: center;
   background-color: black;
-  line-height: 1;
   height:110px
+}
+
+.movie-details h4,
+.movie-details p {
+  margin: 2px 0;
+  font-style: none;
 }
 
 .movie-details > h4:hover {
