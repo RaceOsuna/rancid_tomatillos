@@ -38,12 +38,25 @@
     grid-template-columns: repeat( 2, minmax(150px, 1fr));
   }
 
+  .form-container {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+
   .form-container form {
-    width:40%
+    width:60%;
   }
 
   .form-container input {
     height: 20%;
   }
 
+}
+
+@media screen and (max-width: 325px){
+    .movie_card_section {
+    margin: 2% 3%;
+    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
+  }
 }

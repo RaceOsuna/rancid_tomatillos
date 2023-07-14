@@ -48,3 +48,9 @@
     font-size: 14px;
   }
 }
+
+@media screen and (max-width: 325px) {
+  .card-img {
+    height: 350px
+  }
+}
