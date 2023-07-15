@@ -17,7 +17,7 @@ export default function SingleMovie({getFetchError}) {
 
   return (
     <div className="single_movie_view">
-      <img src={window.innerWidth < 1000 ? movie.poster_path : movie.backdrop_path} />
+      <img src={window.innerWidth < 1000 ? movie.poster_path : movie.backdrop_path} alt={`${movie.title} poster`}/>
       <div className="overlay"> 
         <div className="movie_details">  
           <div className="movie_header">

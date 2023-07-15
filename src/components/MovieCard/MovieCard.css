@@ -25,19 +25,36 @@
   align-items: center;
   justify-content: start;
   margin-top: 10px;
-  /* background-color: black; */
-  height:110px
 }
 
-.movie-details h4,
+.movie-details h1 {
+  font-size: 16px;
+}
+
+/* .movie-details h1:hover {
+  text-decoration: underline;
+  font-size: 18px;
+} */
+
+.movie-details h1,
 .movie-details p {
   margin: 2px 0;
 }
 
-.movie-details > h4:hover {
-  cursor: pointer;
-  text-decoration: underline;
+.card:hover {
+
+  .card-img img {
+    cursor: pointer;
+    box-shadow: 0 3px 17px rgb(85, 250, 3);
+  }
+
+  .movie-details h1 {
+    text-decoration: underline;
+    font-size: 18px;
+  }
+
 }
+
 
 @media screen and (max-width: 420px) {
   .card-img {

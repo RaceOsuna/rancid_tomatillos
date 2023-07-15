@@ -5,10 +5,10 @@ function MovieCard({poster_path, title, average_rating, release_date}) {
   return (
     <div className='card'>
       <div className="card-img">
-        <img src={poster_path}/>
+        <img src={poster_path} alt={`${title} poster`}/>
       </div>
       <div className='movie-details'>
-        <h4>{title}</h4>
+        <h1>{title}</h1>
         <p>{average_rating} ⭐️</p>
         {/* <p>{release_date}</p> */}
       </div>
