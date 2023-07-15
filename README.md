@@ -23,7 +23,7 @@ Welcome to the Rancid Tomatillos React App! This application is designed to help
 
 ## Installation
 
-To run the Rancid Tomatillos React App and perform tests using Cypress, follow these steps:
+To run the Rancid Tomatillos React App, vist [this link](https://rancid-tomatillos-topaz.vercel.app) or follow these steps:
 
 1. Make sure you have [Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed in your local environment.
 2. Clone this repository to your local machine by running `git clone git@github.com:Jade-ZS/rancid_tomatillos.git`.
