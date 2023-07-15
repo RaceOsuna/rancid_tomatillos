@@ -1,6 +1,6 @@
 describe('Search Ba r', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/')
+    cy.visit('https://rancid-tomatillos-topaz.vercel.app')
 
     cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2//movies', {
       status: 200,
@@ -21,12 +21,12 @@ describe('Search Ba r', () => {
     cy.get('.card').first().as('firstCard')
     cy.get('.card').should('have.length', 2)
     
-    cy.get('@firstCard').contains('h4', 'Black Adam')
+    cy.get('@firstCard').contains('h1', 'Black Adam')
     cy.get('@firstCard').find('img').should('be.visible')
     cy.get('@firstCard').contains('p', '4 ⭐️')
 
     cy.get('.card').last().as('lastCard')
-    cy.get('@lastCard').contains('h4', 'Black Panther: Wakanda Forever')
+    cy.get('@lastCard').contains('h1', 'Black Panther: Wakanda Forever')
     cy.get('@lastCard').find('img').should('be.visible')
     cy.get('@lastCard').contains('p', '4 ⭐️')
 
@@ -44,7 +44,7 @@ describe('Search Ba r', () => {
 
   it('user should be able to click the clear result button', () => {
     cy.contains('Clear Results').click()
-    cy.url().should('eq', 'http://localhost:3000/')
+    cy.url().should('eq', 'https://rancid-tomatillos-topaz.vercel.app/')
   })
 
 })

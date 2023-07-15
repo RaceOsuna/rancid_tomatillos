@@ -1,6 +1,6 @@
 describe('template spec', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/436270')
+    cy.visit('https://rancid-tomatillos-topaz.vercel.app/436270')
 
     cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', {
       statusCode: 200,
@@ -31,7 +31,7 @@ describe('template spec', () => {
   it("should go back to home page", () => {
 
     cy.get('button').click()
-    cy.url().should('eq', 'http://localhost:3000/')
+    cy.url().should('eq', 'https://rancid-tomatillos-topaz.vercel.app/')
   })
 
 })

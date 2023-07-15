@@ -5,7 +5,7 @@ describe('visit error page', () => {
       fixture: 'movie' 
     })
 
-    cy.visit('http://localhost:3000/1')
+    cy.visit('http://rancid-tomatillos-topaz.vercel.app/1')
     cy.get('img').should('be.visible')
     cy.get('h1').contains('404')
     cy.get('p').contains('Not Found! This Page does not exist, please try a differnt url...')
