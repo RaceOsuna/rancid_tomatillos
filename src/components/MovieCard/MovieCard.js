@@ -10,7 +10,6 @@ function MovieCard({poster_path, title, average_rating, release_date}) {
       <div className='movie-details'>
         <h1>{title}</h1>
         <p>{average_rating} ⭐️</p>
-        {/* <p>{release_date}</p> */}
       </div>
     </div>
   );
