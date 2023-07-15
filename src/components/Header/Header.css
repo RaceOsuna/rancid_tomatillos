@@ -10,18 +10,6 @@
   margin-right: auto;
 }
 
-.header button {
-  font-size: larger;
-  border-style: none;
-  background-color: black;
-  color: rgb(8, 123, 19)
-}
-
-.header button:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
 @media screen and (max-width: 500px) {
   .header h1 {
     font-size: 25px;

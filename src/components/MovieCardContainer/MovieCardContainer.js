@@ -34,7 +34,7 @@ function MovieCardContainer({getFetchError}) {
 
   const movieFilter = searchParams.get('search')
 
-  const displayMovies = movieFilter ? movieData.filter(movie => movie.title.toLowerCase().includes(movieFilter)) : movieData
+  const displayMovies = movieFilter ? movieData.filter(movie => movie.title.toLowerCase().includes(movieFilter.toLocaleLowerCase())) : movieData
 
   const movieElements = displayMovies.map(movie => (
     <Link to={`/${movie.id}`} key={movie.id}>
