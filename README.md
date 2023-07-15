@@ -1,6 +1,6 @@
-# Movie Rating React App
+# Rancid Tomatillos React App
 
-Welcome to the Movie Rating React App! This application is designed to help movie enthusiasts search for movies, view their details, and rate them. It includes dynamic and asynchronous search functionality and utilizes Cypress for testing purposes.
+Welcome to the Rancid Tomatillos React App! This application is designed to help movie enthusiasts search for movies, view their details, and rate them. It includes dynamic and asynchronous search functionality and utilizes Cypress for testing purposes.
 
 ## Features
 
@@ -14,25 +14,26 @@ Welcome to the Movie Rating React App! This application is designed to help movi
 
 ## Installation
 
-To run the Movie Rating React App and perform tests using Cypress, follow these steps:
+To run the Rancid Tomatillos React App and perform tests using Cypress, follow these steps:
 
-1. Clone this repository to your local machine or download the ZIP file and extract it.
+1. Clone this repository to your local machine by running `git clone git@github.com:Jade-ZS/rancid_tomatillos.git`.
+2. Enter the project directory by running `cd rancid_tomatillos`.
 
-2. Navigate to the project directory using the command line.
+3. Navigate to the project directory using the command line.
 
-3. Install the required dependencies by running the following command:
+4. Install the required dependencies by running the following command:
 
    ```shell
    npm install
    ```
 
-4. Start the development server by running the following command:
+5. Start the development server by running the following command:
 
    ```shell
    npm start
    ```
 
-5. Open your web browser and navigate to `http://localhost:3000` to access the Movie Rating React App.
+6. Open your web browser and navigate to `http://localhost:3000` to access the Rancid Tomatillos React App.
 
 ## Testing
 
@@ -54,7 +55,7 @@ To run the automated tests using Cypress, ensure that the development server is 
 
 ## Technologies Used
 
-The Movie Rating React App and its testing framework use the following technologies:
+The Rancid Tomatillos React App and its testing framework use the following technologies:
 
 - React: A JavaScript library for building user interfaces.
 - Redux: A predictable state container for managing application state.
@@ -64,7 +65,7 @@ The Movie Rating React App and its testing framework use the following technolog
 
 ## Contributing
 
-Contributions to the Movie Rating React App are welcome! If you encounter any issues, have ideas for new features, or want to contribute code, please follow these steps:
+Contributions to the Rancid Tomatillos React App are welcome! If you encounter any issues, have ideas for new features, or want to contribute code, please follow these steps:
 
 1. Fork the repository and create a new branch for your contribution.
 
@@ -78,15 +79,15 @@ Our team will review your contribution, provide feedback, and merge it into the 
 
 ## Feedback and Support
 
-If you have any questions, suggestions, or feedback regarding the Movie Rating React App, please feel free to reach out to our support team at [support@example.com](mailto:support@example.com). We value your input and will be happy to assist you.
+If you have any questions, suggestions, or feedback regarding the Rancid Tomatillos React App, please feel free to reach out to our support team at [support@example.com](mailto:support@example.com). We value your input and will be happy to assist you.
 
 ## License
 
-The Movie Rating React App is released under the [MIT License](LICENSE). You are free to use, modify, and distribute the application in accordance with the terms and conditions of the license.
+The Rancid Tomatillos React App is released under the [MIT License](LICENSE). You are free to use, modify, and distribute the application in accordance with the terms and conditions of the license.
 
 ## Acknowledgements
 
-We would like to express our gratitude to the following resources and projects that contributed to the development of the Movie Rating React App:
+We would like to express our gratitude to the following resources and projects that contributed to the development of the Rancid Tomatillos React App:
 
 - [React](https://reactjs.org/) for providing an excellent library for building user interfaces.
 - [Redux](https://redux.js.org/) for managing application state.
@@ -97,7 +98,7 @@ Without the above resources, this application wouldn't have been possible.
 
 ## Disclaimer
 
-The Movie Rating React App is intended for educational and entertainment purposes only. The movie ratings and reviews are subjective opinions expressed by individual users and do not reflect any professional critiques or assessments.
+The Rancid Tomatillos React App is intended for educational and entertainment purposes only. The movie ratings and reviews are subjective opinions expressed by individual users and do not reflect any professional critiques or assessments.
 
 Enjoy searching for movies, rating them, and happy watching!
 
