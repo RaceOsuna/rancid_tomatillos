@@ -14,6 +14,15 @@ Welcome to the Rancid Tomatillos React App! This application is designed to help
 
 5. **Testing with Cypress:** The app includes automated tests using Cypress, a JavaScript-based end-to-end testing framework. These tests ensure that the app functions correctly and reliably.
 
+## Preview
+- Search existing movies
+
+  ![successful search](https://user-images.githubusercontent.com/123802263/253761238-ca69c5fa-302a-4de9-91cc-c6b7b4de6862.gif)
+
+- Search non-existing movies
+
+  ![failed search](https://user-images.githubusercontent.com/123802263/253761248-17e16fa4-52a8-46c6-93ff-827be158f59b.gif)
+
 ## Installation
 
 To run the Rancid Tomatillos React App and perform tests using Cypress, follow these steps:
