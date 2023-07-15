@@ -7,12 +7,10 @@ Welcome to the Rancid Tomatillos React App! This application is designed to help
 1. **Movie Search:** Users can search for movies by title. The search functionality is dynamic and asynchronous, providing instant results as the user types.
 
 2. **Movie Details:** Clicking on a movie in the search results displays detailed information about the selected movie, including the synopsis, release date, director, and ratings.
-
-3. **Rating and Reviews:** Users can rate movies on a scale of 1 to 5 stars and leave personalized reviews to share their opinions with others.
-
-4. **Responsive Design:** The app's user interface is designed to be responsive and adapt to various screen sizes, ensuring a consistent and enjoyable experience on desktops, tablets, and mobile devices.
-
-5. **Testing with Cypress:** The app includes automated tests using Cypress, a JavaScript-based end-to-end testing framework. These tests ensure that the app functions correctly and reliably.
+   
+3. **Responsive Design:** The app's user interface is designed to be responsive and adapt to various screen sizes, ensuring a consistent and enjoyable experience on desktops, tablets, and mobile devices.
+   
+4. **Testing with Cypress:** The app includes automated tests using Cypress, a JavaScript-based end-to-end testing framework. These tests ensure that the app functions correctly and reliably.
 
 ## Preview
 - Search existing movies
