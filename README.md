@@ -44,7 +44,7 @@ To run the automated tests using Cypress, ensure that the development server is 
 5. The tests will execute in a new browser window. You can observe the test execution and check the test results in the Cypress Test Runner window.
 
 ## Contributors
-[Jade](https://github.com/Jade-ZS) and [Race](https://github.com/RaceOsuna)
+[Jade Shi](https://github.com/Jade-ZS) and [Race Osuna](https://github.com/RaceOsuna)
 
 ## Technologies Used
 
